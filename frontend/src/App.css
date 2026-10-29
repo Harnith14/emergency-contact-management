@@ -1,0 +1,411 @@
+
+/* ===== Global Theme ===== */
+:root {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #f4f7fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f4f7fc;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+/* ===== Main Application ===== */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app,
+.container,
+.app-container {
+  width: min(1120px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 32px 0 48px;
+}
+
+/* ===== Headings ===== */
+h1 {
+  margin: 0 0 12px;
+  color: #172033;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  letter-spacing: -1.3px;
+  text-align: center;
+}
+
+h2 {
+  margin: 0 0 24px;
+  color: #172033;
+  font-size: 25px;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+h3 {
+  color: #172033;
+}
+
+/* ===== Add Contact Form ===== */
+section {
+  margin-bottom: 28px;
+}
+
+section form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e8edf5;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(24, 39, 75, 0.05);
+}
+
+label {
+  margin-top: 4px;
+  color: #344054;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  color: #172033;
+  background: #ffffff;
+  border: 1px solid #d7deea;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder {
+  color: #98a2b3;
+}
+
+input:focus,
+select:focus {
+  border-color: #5278f5;
+  box-shadow: 0 0 0 4px rgba(82, 120, 245, 0.12);
+}
+
+section form button {
+  min-height: 48px;
+  margin-top: 8px;
+  padding: 12px 18px;
+  color: #ffffff;
+  font-weight: 750;
+  background: #315cf5;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 12px rgba(49, 92, 245, 0.18);
+}
+
+section form button:hover {
+  background: #2449d8;
+  box-shadow: 0 7px 18px rgba(49, 92, 245, 0.25);
+}
+
+/* ===== Dashboard ===== */
+.dashboard {
+  margin: 36px 0;
+}
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.stat-card {
+  min-height: 155px;
+  padding: 24px 16px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e8edf5;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(24, 39, 75, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(24, 39, 75, 0.09);
+}
+
+.stat-card span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.stat-card h3 {
+  margin: 0 0 8px;
+  color: #315cf5;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.stat-card p {
+  margin: 0;
+  color: #66758f;
+  font-size: 15px;
+}
+
+/* ===== Contact Search ===== */
+.search-input {
+  display: block;
+  width: 100%;
+  margin: 0 0 20px;
+  background: #ffffff;
+}
+
+/* ===== Contact Cards ===== */
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 14px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e8edf5;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(24, 39, 75, 0.04);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.contact-card:hover {
+  border-color: #cbd7ff;
+  box-shadow: 0 10px 28px rgba(24, 39, 75, 0.08);
+}
+
+.avatar {
+  display: flex;
+  flex: 0 0 52px;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  color: #315cf5;
+  font-size: 21px;
+  font-weight: 800;
+  background: #e9efff;
+  border-radius: 16px;
+}
+
+.details {
+  flex: 1;
+  min-width: 0;
+}
+
+.details h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  overflow-wrap: anywhere;
+}
+
+.details p {
+  margin: 4px 0;
+  color: #66758f;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+/* ===== Contact Action Buttons ===== */
+.contact-card button {
+  min-height: 40px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  border: none;
+  border-radius: 9px;
+}
+
+.contact-card button:first-of-type {
+  color: #2449d8;
+  background: #e9efff;
+}
+
+.contact-card button:first-of-type:hover {
+  background: #d8e3ff;
+}
+
+.contact-card button:last-of-type {
+  color: #c62828;
+  background: #fff0f0;
+}
+
+.contact-card button:last-of-type:hover {
+  background: #ffe0e0;
+}
+
+/* ===== Call Button ===== */
+.contact-card a,
+.contact-card button.call-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 10px 14px;
+  color: #087443;
+  font-weight: 750;
+  text-decoration: none;
+  background: #e0f8eb;
+  border-radius: 9px;
+}
+
+.contact-card a:hover,
+.contact-card button.call-button:hover {
+  background: #c9f1db;
+}
+
+/* ===== Errors and Empty States ===== */
+.error {
+  margin: 16px 0;
+  padding: 13px 16px;
+  color: #b42318;
+  font-size: 14px;
+  background: #fff0ee;
+  border: 1px solid #ffd1cc;
+  border-radius: 10px;
+}
+
+.empty {
+  padding: 28px;
+  color: #66758f;
+  text-align: center;
+  background: #ffffff;
+  border: 1px dashed #cbd5e1;
+  border-radius: 14px;
+}
+
+/* ===== Emergency Assistance ===== */
+.emergency,
+.emergency-assistance {
+  padding: 28px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e8edf5;
+  border-radius: 18px;
+}
+
+.emergency button,
+.emergency-assistance button {
+  padding: 14px 22px;
+  color: #ffffff;
+  font-weight: 800;
+  background: #dc2626;
+  border: none;
+  border-radius: 10px;
+}
+
+.emergency button:hover,
+.emergency-assistance button:hover {
+  background: #b91c1c;
+}
+
+/* ===== Responsive Layout ===== */
+@media (max-width: 760px) {
+  .app,
+  .container,
+  .app-container {
+    width: calc(100% - 24px);
+    padding-top: 22px;
+  }
+
+  section form {
+    padding: 20px;
+  }
+
+  .dashboard-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .stat-card {
+    min-height: 135px;
+    padding: 20px 10px;
+  }
+
+  .contact-card {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .details {
+    flex-basis: calc(100% - 68px);
+  }
+
+  .contact-card button,
+  .contact-card a {
+    flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .dashboard-cards {
+    gap: 9px;
+  }
+
+  .stat-card h3 {
+    font-size: 27px;
+  }
+
+  .stat-card p {
+    font-size: 13px;
+  }
+
+  .contact-card {
+    gap: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
